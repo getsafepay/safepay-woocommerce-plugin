@@ -211,7 +211,7 @@ For more information <a href='https://bit.ly/Howtousesafepay' target='_blank' re
                         . '<br /><br />' .
 
                         // translators: Step 1 of the instructions for 'webhook shared secrets' on settings page.
-                        __('1. Navigate to your Live Safepay dashboard by clicking <a href="https://getsafepay.com/dashboard/webhooks">here</a>', $this->id)
+                        __('1. Navigate to your Live Safepay dashboard by clicking <a target="_blank" href="https://getsafepay.com/dashboard/webhooks">here</a>', $this->id)
 
                         . '<br />' .
 
@@ -238,7 +238,7 @@ For more information <a href='https://bit.ly/Howtousesafepay' target='_blank' re
                         . '<br /><br />' .
 
                         // translators: Step 1 of the instructions for 'webhook shared secrets' on settings page.
-                        __('1. Navigate to your Sandbox Safepay dashboard by clicking <a href="https://sandbox.api.getsafepay.com/dashboard/webhooks">here</a>', $this->id)
+                        __('1. Navigate to your Sandbox Safepay dashboard by clicking <a target="_blank" href="https://sandbox.api.getsafepay.com/dashboard/webhooks">here</a>', $this->id)
 
                         . '<br />' .
 
