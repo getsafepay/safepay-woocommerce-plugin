@@ -39,9 +39,9 @@ function woocommerce_safepay_init()
         const SANDBOX_CHECKOUT_URL        = "https://sandbox.api.getsafepay.com/checkout/pay";
 
         const DEFAULT_UNSUPPORTED_MESSAGE = "Safepay currently does not support your store currency. Please choose from either USD ($) or PKR (Rs)";
-        const DEFAULT_LABEL               = "Pay with your credit or debit card, bank account or mobile wallet";
+        const DEFAULT_LABEL               = "Safepay";
         const DEFAULT_DESCRIPTION         = "<p>Pay securely via credit or debit cards, bank accounts and mobile wallets.<br />
-For more information <a href='https://bit.ly/Howtousesafepay' target='_blank' rel='noopener'> Click Here</a></p>";
+        // For more information <a href='https://bit.ly/Howtousesafepay' target='_blank' rel='noopener'> Click Here</a></p>";
         const DEFAULT_SUCCESS_MESSAGE     = "Thank you for shopping with us. Your payment method has been charged and your transaction is successful. We will begin processing your order soon.";
 
         protected $visible_settings = array(
@@ -114,17 +114,19 @@ For more information <a href='https://bit.ly/Howtousesafepay' target='_blank' re
 
         public function __construct()
         {
-            $this->icon =  plugins_url('images/logo.png', __FILE__);
+            $this->icon =  plugins_url('images/card.svg', __FILE__);
 
             $this->init_form_fields();
             $this->init_settings();
             $this->init_hooks();
-            $this->title          = $this->get_option('title');
+            // $this->get_option('title')
+            $this->title          = is_admin() ? $this->get_option('title') : "";
             $this->description    = $this->get_option('description');
             $this->enabled        = $this->get_option('enabled');
             $this->sandbox        = 'yes' === $this->get_option('sandbox_mode');
 
             $this->init_admin_options();
+           
         }
 
         /**
