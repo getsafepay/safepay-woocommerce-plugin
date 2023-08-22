@@ -280,7 +280,7 @@ function woocommerce_safepay_init()
                 get_woocommerce_currency(),
                 apply_filters(
                     'woocommerce_paypal_supported_currencies',
-                    array('PKR', 'USD')
+                    array('PKR', 'USD', 'GBP', 'AED', 'EUR', 'CAD', 'SAR')
                 ),
                 true
             );
