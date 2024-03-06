@@ -35,7 +35,7 @@ function woocommerce_safepay_init()
         const SANDBOX                     = "sandbox";
         const PRODUCTION                  = "production";
 
-        const PRODUCTION_CHECKOUT_URL     = "https://www.getsafepay.com/checkout/pay";
+        const PRODUCTION_CHECKOUT_URL     = "https://getsafepay.com/checkout/pay";
         const SANDBOX_CHECKOUT_URL        = "https://sandbox.api.getsafepay.com/checkout/pay";
 
         const DEFAULT_UNSUPPORTED_MESSAGE = "Safepay currently does not support your store currency. Please choose from either USD ($) or PKR (Rs)";
